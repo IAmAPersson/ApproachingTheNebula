@@ -25,13 +25,4 @@ public class ShipMovement : MonoBehaviour
 
         transform.position += moveSpeed * new Vector3(dir.x, dir.y, 0.0f) * Time.deltaTime;
     }
-
-    void OnCollisionEnter2D(Collision2D other)
-    {
-        //move along with platform
-        if (other.transform.tag == "Collider")
-        {
-            Debug.Log("Hit something");
-        }
-    }
 }
