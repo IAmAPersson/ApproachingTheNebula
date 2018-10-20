@@ -138,7 +138,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1810113}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -15.06, y: 0.34061, z: 0.69731003}
+  m_LocalPosition: {x: -15.29, y: 0.34061, z: 0.69731003}
   m_LocalScale: {x: 7.830295, y: 7.830295, z: 7.830295}
   m_Children: []
   m_Father: {fileID: 0}
@@ -198,13 +198,13 @@ FixedJoint2D:
   m_GameObject: {fileID: 1810113}
   m_Enabled: 1
   serializedVersion: 4
-  m_EnableCollision: 1
+  m_EnableCollision: 0
   m_ConnectedRigidBody: {fileID: 1252115450}
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
-  m_AutoConfigureConnectedAnchor: 1
+  m_AutoConfigureConnectedAnchor: 0
   m_Anchor: {x: 0.11, y: 0}
-  m_ConnectedAnchor: {x: -0.05683051, y: 0.02786203}
+  m_ConnectedAnchor: {x: -0.07637832, y: 0.02786203}
   m_DampingRatio: 0
   m_Frequency: 0
 --- !u!50 &1810117
@@ -217,14 +217,14 @@ Rigidbody2D:
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
+  m_UseAutoMass: 1
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.4
   m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
-  m_SleepingMode: 1
+  m_SleepingMode: 2
   m_CollisionDetection: 0
   m_Constraints: 0
 --- !u!1 &236898367
@@ -312,7 +312,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 236898367}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -12.12, y: 0.38, z: -0.14413835}
+  m_LocalPosition: {x: -11.91, y: 0.38, z: -0.14413835}
   m_LocalScale: {x: 8.668146, y: 8.668146, z: 8.668146}
   m_Children: []
   m_Father: {fileID: 0}
@@ -330,7 +330,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.002117753, y: 0.0021169782}
+  m_Offset: {x: 0.0007032752, y: 0.0021169782}
   m_SpriteTilingProperty:
     border: {x: 0.049999997, y: 0.049999997, z: 0.049999997, w: 0.049999997}
     pivot: {x: 0.5, y: 0.5}
@@ -341,7 +341,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.121879905, y: 0.13036254}
+  m_Size: {x: 0.13602489, y: 0.13036254}
   m_EdgeRadius: 0
 --- !u!50 &236898372
 Rigidbody2D:
@@ -353,8 +353,8 @@ Rigidbody2D:
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
+  m_UseAutoMass: 1
+  m_Mass: 1.3323662
   m_LinearDrag: 0
   m_AngularDrag: 0.4
   m_GravityScale: 0
@@ -362,7 +362,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 4
+  m_Constraints: 0
 --- !u!1 &426736527
 GameObject:
   m_ObjectHideFlags: 0
@@ -615,15 +615,15 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 0
   m_Anchor: {x: 0.08, y: 0}
-  m_ConnectedAnchor: {x: -0.05407379, y: -0.006921896}
+  m_ConnectedAnchor: {x: -0.078300424, y: -0.006921896}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
     m_MaximumMotorForce: 10000
   m_UseLimits: 1
   m_AngleLimits:
-    m_LowerAngle: 90
-    m_UpperAngle: 270
+    m_LowerAngle: 110
+    m_UpperAngle: 255
 --- !u!50 &1252115450
 Rigidbody2D:
   serializedVersion: 4
@@ -634,14 +634,14 @@ Rigidbody2D:
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
+  m_UseAutoMass: 1
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.4
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
-  m_SleepingMode: 1
+  m_SleepingMode: 2
   m_CollisionDetection: 0
   m_Constraints: 0
 --- !u!212 &1252115451
@@ -678,7 +678,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 1
   m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
   m_Color: {r: 1, g: 0, b: 0.8301325, a: 1}
   m_FlipX: 0
