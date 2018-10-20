@@ -24,11 +24,6 @@ public class ShipMovement : MonoBehaviour
         dir.Normalize();
 
         transform.position += moveSpeed * new Vector3(dir.x, dir.y, 0.0f) * Time.deltaTime;
-
-        float angle = Vector2.Angle(dir, Vector2.up);
-        if (dir.x > 0)
-            angle = -angle;
-        ship.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
     }
 
     void OnCollisionEnter2D(Collision2D other)
