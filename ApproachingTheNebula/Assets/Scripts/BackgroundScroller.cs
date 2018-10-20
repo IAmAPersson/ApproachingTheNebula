@@ -18,6 +18,8 @@ public class BackgroundScroller : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        transform.Translate((new Vector3(-1,0,0)) * speed * Time.deltaTime);
+        if (speed < 5)
+            speed += 0.05f;
+        transform.Translate(new Vector3(-1,0,0) * speed * Time.deltaTime);
 	}
 }
