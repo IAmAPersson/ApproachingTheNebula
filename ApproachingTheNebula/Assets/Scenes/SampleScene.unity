@@ -124,6 +124,7 @@ GameObject:
   - component: {fileID: 1810115}
   - component: {fileID: 1810117}
   - component: {fileID: 1810116}
+  - component: {fileID: 1810118}
   m_Layer: 0
   m_Name: Dyson
   m_TagString: Untagged
@@ -198,7 +199,7 @@ FixedJoint2D:
   m_GameObject: {fileID: 1810113}
   m_Enabled: 1
   serializedVersion: 4
-  m_EnableCollision: 0
+  m_EnableCollision: 1
   m_ConnectedRigidBody: {fileID: 1252115450}
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
@@ -217,7 +218,7 @@ Rigidbody2D:
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 1
+  m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.4
@@ -227,6 +228,21 @@ Rigidbody2D:
   m_SleepingMode: 2
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!58 &1810118
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1810113}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.1
 --- !u!1 &236898367
 GameObject:
   m_ObjectHideFlags: 0
@@ -353,7 +369,7 @@ Rigidbody2D:
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 1
+  m_UseAutoMass: 0
   m_Mass: 1.3323662
   m_LinearDrag: 0
   m_AngularDrag: 0.4
@@ -362,7 +378,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!1 &426736527
 GameObject:
   m_ObjectHideFlags: 0
@@ -594,6 +610,7 @@ GameObject:
   - component: {fileID: 1252115451}
   - component: {fileID: 1252115450}
   - component: {fileID: 1252115449}
+  - component: {fileID: 1252115453}
   m_Layer: 0
   m_Name: tether
   m_TagString: Untagged
@@ -622,8 +639,8 @@ HingeJoint2D:
     m_MaximumMotorForce: 10000
   m_UseLimits: 1
   m_AngleLimits:
-    m_LowerAngle: 110
-    m_UpperAngle: 255
+    m_LowerAngle: 255
+    m_UpperAngle: 110
 --- !u!50 &1252115450
 Rigidbody2D:
   serializedVersion: 4
@@ -634,7 +651,7 @@ Rigidbody2D:
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 1
+  m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.4
@@ -703,6 +720,31 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1252115453
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1252115448}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0.049999997, y: 0.049999997, z: 0.049999997, w: 0.049999997}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.16, y: 0.16}
+    newSize: {x: 0.16, y: 0.16}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.16, y: 0.16}
+  m_EdgeRadius: 0
 --- !u!1 &1631027524
 GameObject:
   m_ObjectHideFlags: 0
