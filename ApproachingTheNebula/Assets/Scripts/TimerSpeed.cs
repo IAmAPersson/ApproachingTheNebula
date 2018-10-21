@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class TimerSpeed : MonoBehaviour
 {
     const double init = 48.5, fin = -55.5;
+    double distance;
 
     // Use this for initialization
     void Start ()
@@ -21,7 +22,7 @@ public class TimerSpeed : MonoBehaviour
         var txt = gameObject.GetComponent<Text>();
         var speed = FindObjectOfType<BackgroundScroller>();
         double current = speed.xposition;
-        double distance = Math.Abs((speed.speed != 0) ? Math.Truncate((1344.0 * (fin - current)) / (Convert.ToDouble(PercentC(speed.speed)) * (fin - init))) : 0);
+        distance = Math.Abs((speed.speed != 0) ? Math.Truncate((1344.0 * (fin - current)) / (Convert.ToDouble(PercentC(speed.speed)) * (fin - init))) : 0);
         int temp = 0;
         try { temp = Convert.ToInt32(55 * (distance / 1344) - 30); } catch { }; //I'm sorry gods of good practice
         txt.text = "S P E E D: " + PercentC(speed.speed) + "c" + Environment.NewLine +
