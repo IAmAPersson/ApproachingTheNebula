@@ -14,6 +14,7 @@ public class GameOver : MonoBehaviour {
 	void Update () {
 		if ( Input.GetKeyDown(KeyCode.R) ) {
 			Debug.Log("Restarting Level");
+			
 			// SceneManager.LoadScene("Scenes/LosingScene.unity");
 		}
 	}
