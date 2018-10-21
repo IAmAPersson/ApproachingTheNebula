@@ -22,7 +22,8 @@ public class TimerSpeed : MonoBehaviour
         var speed = FindObjectOfType<BackgroundScroller>();
         double current = speed.xposition;
         double distance = Math.Abs((speed.speed != 0) ? Math.Truncate((1344.0 * (fin - current)) / (Convert.ToDouble(PercentC(speed.speed)) * (fin - init))) : 0);
-        int temp = Convert.ToInt32(55 * (distance / 1344) - 30);
+        int temp = 0;
+        try { temp = Convert.ToInt32(55 * (distance / 1344) - 30); } catch { }; //I'm sorry gods of good practice
         txt.text = "S P E E D: " + PercentC(speed.speed) + "c" + Environment.NewLine +
                    "T E M P E R A T U R E: " + temp + " C" + Environment.NewLine +
                    "D I S T A N C E  T O  O R I O N: " + distance + "ly";
