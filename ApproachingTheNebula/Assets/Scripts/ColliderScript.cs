@@ -9,7 +9,7 @@ public class ColliderScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		Text[] textFields = Camera.main.GetComponents<Text>();
+		Text[] textFields = Camera.allCameras[0].GetComponentsInChildren<Text>();
 		for (int i = 0; i < textFields.Length; i++ ) {
 			if (textFields[i].name == "Results") {
 				resultsTextField = textFields[i];
