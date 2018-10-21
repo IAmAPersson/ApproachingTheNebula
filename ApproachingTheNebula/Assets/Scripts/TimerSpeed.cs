@@ -40,7 +40,7 @@ public class TimerSpeed : MonoBehaviour
                    "T E M P E R A T U R E: " + temp + " C" + Environment.NewLine +
                    "D I S T A N C E  T O  O R I O N: " + distance + "ly" + Environment.NewLine +
                    "T I M E  E L A P S E D: " + (1344 - distance) + "y";
-	if ( distance == 0 && passedTheStart ) {
+	if (speed.completed) {
 		resultsTextField.text = "Orion Has Been Reached.\nPress [R] to restart.";
 	}
 	passedTheStart = true;

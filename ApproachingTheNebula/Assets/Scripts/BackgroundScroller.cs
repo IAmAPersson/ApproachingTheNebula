@@ -9,6 +9,7 @@ public class BackgroundScroller : MonoBehaviour {
     Vector3 startPosition;
     bool beginning = true;
     public double xposition;
+    public bool completed;
 
 	// Use this for initialization
 	void Start () {
@@ -27,7 +28,10 @@ public class BackgroundScroller : MonoBehaviour {
         if (xposition < -45 && speed > 0)
             speed -= 0.05f;
         if (speed < 0)
+        {
             speed = 0;
+            completed = true;
+        }
 
 	}
 }
