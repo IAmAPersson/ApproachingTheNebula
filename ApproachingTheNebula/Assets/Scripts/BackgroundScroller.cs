@@ -25,7 +25,7 @@ public class BackgroundScroller : MonoBehaviour {
             beginning = false;
         transform.Translate(new Vector3(-1,0,0) * speed * Time.deltaTime);
         if (xposition < -45 && speed > 0)
-            speed -= 0.02f;
+            speed -= 0.05f;
         if (speed < 0)
             speed = 0;
 
