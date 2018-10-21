@@ -38,7 +38,8 @@ public class TimerSpeed : MonoBehaviour
         try { temp = Convert.ToInt32(55 * (distance / 1344) - 30); } catch { }; //I'm sorry gods of good practice
         txt.text = "S P E E D: " + PercentC(speed.speed) + "c" + Environment.NewLine +
                    "T E M P E R A T U R E: " + temp + " C" + Environment.NewLine +
-                   "D I S T A N C E  T O  O R I O N: " + distance + "ly";
+                   "D I S T A N C E  T O  O R I O N: " + distance + "ly" + Environment.NewLine +
+                   "T I M E  E L A P S E D: " + (1344 - distance) + "y";
 	if ( distance == 0 && passedTheStart ) {
 		resultsTextField.text = "Orion Has Been Reached.\nPress [R] to restart.";
 	}
