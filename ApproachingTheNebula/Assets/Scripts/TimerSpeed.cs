@@ -18,7 +18,9 @@ public class TimerSpeed : MonoBehaviour
     {
         var txt = gameObject.GetComponent<Text>();
         var speed = FindObjectOfType<BackgroundScroller>();
-        txt.text = "S P E E D: " + PercentC(speed.speed);
+        txt.text = "S P E E D: " + PercentC(speed.speed) + Environment.NewLine +
+                   "T E M P E R A T U R E: " + "25 C" + Environment.NewLine +
+                   "D I S T A N C E  T O  O R I O N: " + 1344 + "ly";
     }
 
     private static string PercentC(float speed)
